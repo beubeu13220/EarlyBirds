@@ -45,8 +45,9 @@ object Job {
     val dfTransform = df
       //on cast le timestamp long en Timestamp afin d'utiliser notre fonction dateDiffUdf
       .withColumn("timestamp", (col("timestamp")/timestampScale).cast(TimestampType))
-      //on get le max timestamp de tout le DF
-      .withColumn("maxTimestamp", max(col("timestamp")))
+      //on get le max timestamp de tout le DF (je ne sais pas si il fallait le max de tout le DF ou le max par userID)
+      //la modification n'est pas compliqué avec les windows et moins couteuse si on crée des partitions par userID
+      .withColumn("maxTimestamp", max(col("timestamp")).over)
       .withColumn("diffDays", dateDiffUDF()(col("maxTimestamp"),col("timestamp"),lit("d")))
       // On s'assure d'avoir des entiers pour notre calcule de puissance qui suit
       .withColumn("diffDaysNorm", round(col("diffDays")))
@@ -55,8 +56,8 @@ object Job {
 
     val aggRatings = dfTransform
       // 2 Jointures pour récupérer les users & items en integer, puis un groupBy
-      // pour calculer la somme des ratings par users et items
-      // on cache pour pas calculer 2 fois, une fois à l'export et une fois au test
+      // pour calcule la somme des ratings par users et items
+      // on cache pour ne pas calculer 2 fois, une fois à l'export et une fois au test
       .join(lookUpUser, List("userID"), "left")
       .join(lookUpProduct, List("itemID"), "left")
       .groupBy("userIDAsInteger", "itemIDAsInteger").agg(sum("penRating").alias("ratingSum"))
@@ -71,9 +72,6 @@ object Job {
 
     map_save.keys.foreach( name => fromDfToExport(map_save(name),args(1),name))
 
-    // on a cache tout les DF donc on les unpersist
-    dfToExport.foreach(df=>df.unpersist())
-
     // Création des logs de test et export dans un fichier txt
     // Peut être optimisé
     testResults += testUniqueID(df,lookUpUser, List(col("userID")))
@@ -81,6 +79,10 @@ object Job {
     testResults += testUniqueID(df,aggRatings, List(col("userID"),col("itemID")))
 
     fromTestResultToSave(testResults, args(1),"outTestExport")
+
+    // on a cache tout les DF donc on les unpersist
+    dfToExport.foreach(df=>df.unpersist())
+
   }
 
   // Fonction de test pour vérifier que le nombre de ligne correspond bien

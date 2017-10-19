@@ -27,14 +27,14 @@ object DataHelper {
     *
     * @param date_date1
     * @param date_date2
-    * @param time_unit . period unit can take the following values:
+    * @param time_unit .on peut choisir différentes périodes pour le format de retour
     *                  - "s" for seconds
     *                  - "m" for minute
     *                  - "h" for hour
     *                  - "d" for day
     *                  - "M" for month
     *                  - "y" for year
-    * @return date1 - date2  with the good time unit format
+    * @return date1 - date2  avec le bon format
     */
   def computeTimeBetweenDate1AndDate2Date(date_date1: Timestamp,
                                           date_date2: Timestamp,
