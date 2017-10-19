@@ -1,0 +1,37 @@
+[0m[[0mdebug[0m] [0mCalculate mappings...[0m
+[0m[[0minfo[0m] [0mChecking every *.class/*.jar file's SHA-1.[0m
+[0m[[0minfo[0m] [0mMerging files...[0m
+[0m[[0minfo[0m] [0mSHA-1: 947484f756c6b911c55be725ca2ba03e7d96c12d[0m
+[0m[[0minfo[0m] [0mPackaging C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\scala-2.11\EarlyBirdsAB-1.0.jar ...[0m
+[0m[[0mdebug[0m] [0mInput file mappings:[0m
+[0m[[0mdebug[0m] [0m	com\abrehelin\Constants$.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\com\abrehelin\Constants$.class[0m
+[0m[[0mdebug[0m] [0m	com\abrehelin\Constants.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\com\abrehelin\Constants.class[0m
+[0m[[0mdebug[0m] [0m	com\abrehelin\Job$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\com\abrehelin\Job$$anonfun$main$1.class[0m
+[0m[[0mdebug[0m] [0m	com\abrehelin\Job$$anonfun$main$2.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\com\abrehelin\Job$$anonfun$main$2.class[0m
+[0m[[0mdebug[0m] [0m	com\abrehelin\Job$.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\com\abrehelin\Job$.class[0m
+[0m[[0mdebug[0m] [0m	com\abrehelin\Job.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\com\abrehelin\Job.class[0m
+[0m[[0mdebug[0m] [0m	utils\DataHelper$$anonfun$dateDiffUDF$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\utils\DataHelper$$anonfun$dateDiffUDF$1.class[0m
+[0m[[0mdebug[0m] [0m	utils\DataHelper$$typecreator1$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\utils\DataHelper$$typecreator1$1.class[0m
+[0m[[0mdebug[0m] [0m	utils\DataHelper$$typecreator2$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\utils\DataHelper$$typecreator2$1.class[0m
+[0m[[0mdebug[0m] [0m	utils\DataHelper$$typecreator3$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\utils\DataHelper$$typecreator3$1.class[0m
+[0m[[0mdebug[0m] [0m	utils\DataHelper$$typecreator4$1.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\utils\DataHelper$$typecreator4$1.class[0m
+[0m[[0mdebug[0m] [0m	utils\DataHelper$.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\utils\DataHelper$.class[0m
+[0m[[0mdebug[0m] [0m	utils\DataHelper.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\utils\DataHelper.class[0m
+[0m[[0mdebug[0m] [0m	utils\ExportHelper$.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\utils\ExportHelper$.class[0m
+[0m[[0mdebug[0m] [0m	utils\ExportHelper.class[0m
+[0m[[0mdebug[0m] [0m	  C:\Users\A.BREHELIN\IdeaProjects\EarlyBirds_AB\target\streams\$global\assemblyOption\$global\streams\assembly\dc88e41c5c320d716b560a2b670f5ad56cb621fd_dir\utils\ExportHelper.class[0m
+[0m[[0minfo[0m] [0mDone packaging.[0m
