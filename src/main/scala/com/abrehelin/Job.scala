@@ -31,7 +31,7 @@ object Job {
       StructField("rating", DoubleType, true),
       StructField("timestamp", LongType, true)))
 
-    // Import de la table ave le path mentionné en argument
+    // Import de la table avec le path mentionné en argument
     val df = spark.read
       .format("com.databricks.spark.csv")
       .option("header", "false")
@@ -46,17 +46,17 @@ object Job {
       //on cast le timestamp long en Timestamp afin d'utiliser notre fonction dateDiffUdf
       .withColumn("timestamp", (col("timestamp")/timestampScale).cast(TimestampType))
       //on get le max timestamp de tout le DF (je ne sais pas si il fallait le max de tout le DF ou le max par userID)
-      //la modification n'est pas compliqué avec les windows et moins couteuse si on crée des partitions par userID
+      //la modification n'est pas compliquée avec les windows et moins couteuse si on crée des partitions par userID
       .withColumn("maxTimestamp", max(col("timestamp")).over)
       .withColumn("diffDays", dateDiffUDF()(col("maxTimestamp"),col("timestamp"),lit("d")))
-      // On s'assure d'avoir des entiers pour notre calcule de puissance qui suit
+      // On s'assure d'avoir des entiers pour notre calcul de puissance qui suit
       .withColumn("diffDaysNorm", round(col("diffDays")))
       .withColumn("penRating", col("rating")*pow(penValue, "diffDaysNorm"))
       .filter(col("penRating")>thresholdRating)
 
     val aggRatings = dfTransform
       // 2 Jointures pour récupérer les users & items en integer, puis un groupBy
-      // pour calcule la somme des ratings par users et items
+      // pour calculer la somme des ratings par users et items
       // on cache pour ne pas calculer 2 fois, une fois à l'export et une fois au test
       .join(lookUpUser, List("userID"), "left")
       .join(lookUpProduct, List("itemID"), "left")
@@ -80,7 +80,7 @@ object Job {
 
     fromTestResultToSave(testResults, args(1),"outTestExport")
 
-    // on a cache tout les DF donc on les unpersist
+    // on a caché tout les DF donc on les unpersist
     dfToExport.foreach(df=>df.unpersist())
 
   }

@@ -64,7 +64,7 @@ object DataHelper {
     * @return dataFrame with old string column and with new integer index column
     */
   def fromIdToIntegerID(df: DataFrame,colNameIn : String , colNameOut : String): DataFrame ={
-    // méthode pas très optimale car on charge tout les ID sur un seul noeud
+    // méthode pas très optimale car on charge tous les ID sur un seul noeud
     df
       .select(colNameIn)
       .distinct
